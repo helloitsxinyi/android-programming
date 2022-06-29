@@ -1,37 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/top"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:text="@string/top"-->
+<!--        android:background="#a4c639"-->
+<!--        app:layout_constraintHeight_percent="0.33"-->
+<!--    &lt;!&ndash; constrain the top of the component to top of smt else. -->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bottom"-->
+<!--        />-->
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/bottom"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:text="@string/top"-->
+<!--        android:background="#03d3fc"-->
+<!--        &lt;!&ndash;constrainedHeight is TYPO!! -->
+<!--        app:layout_constraintHeight_percent="0.66"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/top"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+
+<!--    />-->
+<!--    -->
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/top"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:text="@string/top"
+        android:id="@+id/left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/left"
         android:background="#a4c639"
-        app:layout_constraintHeight_percent="0.33"
-    <!-- constrain the top of the component to top of smt else.-->
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottom"
+        app:layout_constraintWidth="0.33"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/right"
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bottom"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:text="@string/top"
+        android:id="@+id/right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/right"
         android:background="#03d3fc"
-        <!--constrainedHeight is TYPO!!-->
-        app:layout_constraintHeight_percent="0.66"
-        app:layout_constraintTop_toBottomOf="@id/top"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.66"
+        app:layout_constraintLeft_toRightOf="@id/left"
+        app:layout_constraintRight_toRightOf="parent"
 
-    />
-
-
-
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
