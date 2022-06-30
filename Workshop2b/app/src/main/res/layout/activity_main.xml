@@ -42,7 +42,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="horizontal">
-
+<!--    AppCompat -> widget can be used across different versions of android.-->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/left"
         android:layout_width="0dp"
