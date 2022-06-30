@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/visit"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:text="@string/visit"
+            android:background="#abcdef"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/locate"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/locate"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:text="@string/locate"
+            android:background="#f3d09d"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintLeft_toRightOf="@id/visit"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/call"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/call"
+            android:background="#bed8a1"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/email"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/email"
+            android:background="#c5b3e4"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintLeft_toRightOf="@id/call"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

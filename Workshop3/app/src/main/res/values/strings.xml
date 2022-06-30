@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Workshop3</string>
+    <string name="visit">Visit NUS</string>
+    <string name="locate">Locate NUS</string>
+    <string name="call">Call NUS</string>
+    <string name="email">Email NUS</string>
+    <string name="subject">For Enquiry</string>
+    <string name="content">Please state your enquiry...</string>
+</resources>
