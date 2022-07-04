@@ -58,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (intent != null) {
             if (intent.resolveActivity(getPackageManager()) != null) {
+                // set flag is for ordering of the stack
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         }
