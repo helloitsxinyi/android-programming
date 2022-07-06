@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     ActivityResultLauncher<Intent> rlActivityWriteQuote;
-    private String lastQuote;
+    private String lastQuote = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int[] ids = { R.id.write_button, R.id.show_button };
         for (int id : ids) {
             Button button = findViewById(id);
-            button.setOnClickListener(this);
+            if (button != null) {
+                button.setOnClickListener(this);
+            }
         }
     }
 
@@ -52,9 +54,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (id == R.id.write_button) {
             Intent intent = new Intent(this, ActivityWriteQuote.class);
             rlActivityWriteQuote.launch(intent);
-        } else {
+        }
+        if (id == R.id.show_button) {
             Intent intent = new Intent(this, ActivityShowQuote.class);
             intent.putExtra("quote", lastQuote);
+            startActivity(intent);
         }
     }
 

@@ -9,24 +9,29 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityWriteQuote extends AppCompatActivity implements View.OnClickListener {
-    Button okButton = findViewById(R.id.ok_button);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.write_quote);
+        setContentView(R.layout.activity_write_quote);
 
-        okButton.setOnClickListener(this);
+        Button okButton = findViewById(R.id.ok_button);
+        if (okButton != null) {
+            okButton.setOnClickListener(this);
+        }
     }
 
     @Override
     public void onClick(View v) {
         EditText quoteInput = findViewById(R.id.text_quote);
-        Intent response = new Intent();
-        // must toString, otherwise type is wrong
-        response.putExtra("quote", quoteInput.toString());
-        setResult(RESULT_OK, response);
-        finish();
+        if (quoteInput != null) {
+            Intent response = new Intent();
+            // must toString, otherwise type is wrong
+            response.putExtra("quote", quoteInput.getText().toString());
+            setResult(RESULT_OK, response);
+            finish();
+        }
     }
 
 }

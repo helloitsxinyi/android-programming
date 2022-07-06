@@ -4,19 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityShowQuote extends AppCompatActivity {
-    Button okButton = findViewById(R.id.ok_button);
-    TextView lastQuote = findViewById(R.id.quote);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.show_quote);
+        setContentView(R.layout.activity_show_quote);
+
+        Button okButton = findViewById(R.id.ok_button);
+        TextView lastQuote = findViewById(R.id.quote);
 
         Intent intent = getIntent();
         String quote = intent.getStringExtra("quote");

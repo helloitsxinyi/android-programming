@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".ActivityShowQuote">
+    >
 
     <TextView
         android:id="@+id/quote"
@@ -29,4 +29,4 @@
         android:textSize="20sp"
         />
 
-</LinearLayout>>
+</LinearLayout>
