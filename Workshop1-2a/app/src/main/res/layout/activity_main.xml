@@ -52,15 +52,25 @@
         android:background="#a4c639"
         android:textColor="@color/black"
         />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bottom"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:text="@string/bottom"
-        android:background="#03d3fc"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        />
+        android:layout_weight="3"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="hello"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:text="ajskajklds"
+            android:layout_gravity="top"
+            android:id="@+id/hello"/>
+    </LinearLayout>
+
+
 </LinearLayout>
