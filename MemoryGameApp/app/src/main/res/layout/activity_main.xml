@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="@string/mainTitle"
+        android:textSize="18sp"
+        android:textStyle=""
+        />
+
+    <LinearLayout
+        android:id="@+id/urlbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <EditText
+            android:id="@+id/urlInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:inputType="textWebEmailAddress"
+            android:hint="Enter URL"
+            android:ems="14"
+            android:background="@drawable/url_input_box_design"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fetchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="Fetch"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="9dp"
+        android:textSize="15sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/progress_bar_design"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="9dp"
+        style="@android:style/Widget.ProgressBar.Horizontal" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/proceedBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Proceed"/>
+
+    <GridView
+        android:id="@+id/imageGrid"
+        android:layout_width="match_parent"
+        android:layout_height="565dp"
+        android:horizontalSpacing="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:verticalSpacing="2dp" />
+
+</LinearLayout>
